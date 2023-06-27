@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model TurkuvazMedyaNews.Web.Models.HomeViewModel;
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+</style>
+
+<div class="text-center">
+    <p><a href="https://docs.microsoft.com/aspnet/core">Turkuvaz Medya Haber</a></p>
+</div>
+<div class="container">
+    <div class="row border border-dark">
+        <div class="first-news col-8">
+            <div class="row">
+                <img src="@Model.News[0].primaryImage" class="img-fluid m-auto col-12" style="background-color:grey" />
+            </div>
+            @if (Model.News[0].TitleShort != null)
+            {
+                <h1>@Model.News[0].TitleShort</h1>
+            }
+            else
+            {
+                <h1>@Model.News[0].Title</h1>
+            }
+        </div>
+        <div class="col-4" style="background-color:grey">
+            @for (int i = 1; i < 3; i++)
+            {
+                <a href="@Model.News[i].Url"><img src="@Model.News[i].secondaryImage" class="img-fluid p-3 m-auto" /></a>
+            }
+        </div>
+    </div>
+
+
+    <div class="row pt-5 my-auto border border-dark">
+        @for (int i = 3; i < 9; i++)
+        {
+            <div class="col-4 mx-auto">
+                <div class="col-11 mx-auto"><a href="@Model.News[i].Url"><img src="@Model.News[i].primaryImage" class="img-fluid" /></a></div>
+                <div><a href="@Model.News[i].Url"><h1>@Model.News[i].TitleShort</h1></a></div>
+            </div>
+        }
+    </div>
+    <div class="row pt-5 my-auto border border-dark">
+        @for (int i = 9; i < 12; i++)
+        {
+            <h3>@Model.News[i].TitleShort</h3>
+            <p>@Model.News[i].Spot</p>
+        }
+    </div>
+
+    <div class="row pt-5 my-auto border border-dark">
+        <video class="img-fluid" controls poster="@Model.Videos[0].primaryImage">
+            <source src="@Model.Videos[0].VideoUrl" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="row">
+            <div class="col-10">
+                @if (Model.Videos[0].TitleShort != null)
+                {
+                    <h1>@Model.Videos[0].TitleShort</h1>
+                }
+                else
+                {
+                    <h1>@Model.Videos[0].Title</h1>
+                }
+            </div>
+            <div class="col-2">
+                <div class="float-right"> @Model.Videos[0].OutputDate.Split(" ")[1]</div>
+                <div class="float-right"> @Model.Videos[0].OutputDate.Split(" ")[2]</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>@Model.Videos[0].Spot</p>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3 border border-dark">
+        @for (int i = 1; i < Model.Videos.Count; i++)
+        {
+            <div class="col-3 mx-auto">
+                <div class="col-11 mx-auto">
+                    <a href="@Model.Videos[i].Url"><img src="@Model.Videos[i].primaryImage" class="img-fluid"></a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

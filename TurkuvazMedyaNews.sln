@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurkuvazMedyaNews.API", "TurkuvazMedyaNews.API\TurkuvazMedyaNews.API.csproj", "{8D3D9905-458A-4A95-9524-D92FE1C1DB74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurkuvazMedyaNews.Core", "TurkuvazMedyaNews.Core\TurkuvazMedyaNews.Core.csproj", "{F0AFA19B-6E19-4B36-B680-072DB34FC424}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurkuvazMedyaNews.Repository", "TurkuvazMedyaNews.Repository\TurkuvazMedyaNews.Repository.csproj", "{78CAFBEA-69CC-431B-AA45-DCAD5B62EE6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurkuvazMedyaNews.Service", "TurkuvazMedyaNews.Service\TurkuvazMedyaNews.Service.csproj", "{93ED136C-1984-4DE2-B781-60378FFA2F23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurkuvazMedyaNews.Web", "TurkuvazMedyaNews.Web\TurkuvazMedyaNews.Web.csproj", "{627A9848-C05E-4A80-B699-CAFE55E4062E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{93ED136C-1984-4DE2-B781-60378FFA2F23} = {93ED136C-1984-4DE2-B781-60378FFA2F23}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C250F629-06C2-4AEA-9DD2-DDC14DC65274}"
+	ProjectSection(SolutionItems) = preProject
+		Ports.txt = Ports.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D3D9905-458A-4A95-9524-D92FE1C1DB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3D9905-458A-4A95-9524-D92FE1C1DB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3D9905-458A-4A95-9524-D92FE1C1DB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3D9905-458A-4A95-9524-D92FE1C1DB74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0AFA19B-6E19-4B36-B680-072DB34FC424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0AFA19B-6E19-4B36-B680-072DB34FC424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0AFA19B-6E19-4B36-B680-072DB34FC424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0AFA19B-6E19-4B36-B680-072DB34FC424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CAFBEA-69CC-431B-AA45-DCAD5B62EE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CAFBEA-69CC-431B-AA45-DCAD5B62EE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CAFBEA-69CC-431B-AA45-DCAD5B62EE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CAFBEA-69CC-431B-AA45-DCAD5B62EE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93ED136C-1984-4DE2-B781-60378FFA2F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93ED136C-1984-4DE2-B781-60378FFA2F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93ED136C-1984-4DE2-B781-60378FFA2F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93ED136C-1984-4DE2-B781-60378FFA2F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{627A9848-C05E-4A80-B699-CAFE55E4062E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627A9848-C05E-4A80-B699-CAFE55E4062E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627A9848-C05E-4A80-B699-CAFE55E4062E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627A9848-C05E-4A80-B699-CAFE55E4062E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E2D7DEF-9B8A-43C2-98CB-FEE4B405279D}
+	EndGlobalSection
+EndGlobal
